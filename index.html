@@ -19,12 +19,13 @@
 <body>
   <div id="app">
     <h1>{{title}}</h1>
-    <ul>
+    <button @click="charge">Avvia ricerca</button>
+    <ul v-if="emailList.length === 10">
       <li v-for="email in emailList">{{email}}</li>
     </ul>
-    <!-- <div v-else>
-      <div class="lds-ellipsis"><div>
-    </div> -->
+    <div v-else>
+      <div class="lds-ellipsis">Loading...<div>
+    </div>
 
   </div>
   <script src="js/script.js"></script>
