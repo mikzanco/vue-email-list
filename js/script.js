@@ -15,14 +15,16 @@ createApp({
         // inserisco la url dell'API,
         // creo arrpw function nel then che risponde quando lo stato della chimata è positivo e da quindi 200 
         this.emailList = [];
+        for(let i = 1; i <= 10; i++){
+           axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+            .then( result =>{
+             console.log(result.data);
+             this.emailList.push(result.data.response);
+            })
+        // return this.getApi(++this.count);
 
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-        .then( risultato =>{
-          console.log(risultato.data);
-          this.emailList.push(result.data.response);
-
-        })
-        return this.getApi(++this.count);
+        }
+        
       }
   },
   mounted(){

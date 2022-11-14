@@ -19,12 +19,12 @@
 <body>
   <div id="app">
     <h1>{{title}}</h1>
-    <div v-if="isLoaded">
-      
-    </div>
-    <div v-else>
+    <ul>
+      <li v-for="email in emailList">{{email}}</li>
+    </ul>
+    <!-- <div v-else>
       <div class="lds-ellipsis"><div>
-    </div>
+    </div> -->
 
   </div>
   <script src="js/script.js"></script>
